@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		95AA335F2260D996004EAD70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA335E2260D996004EAD70 /* AppDelegate.swift */; };
-		95AA33612260D996004EAD70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33602260D996004EAD70 /* ViewController.swift */; };
+		95AA33612260D996004EAD70 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33602260D996004EAD70 /* CompassViewController.swift */; };
 		95AA33642260D996004EAD70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AA33622260D996004EAD70 /* Main.storyboard */; };
 		95AA33672260D996004EAD70 /* MyCompass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33652260D996004EAD70 /* MyCompass.xcdatamodeld */; };
 		95AA33692260D997004EAD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AA33682260D997004EAD70 /* Assets.xcassets */; };
 		95AA336C2260D997004EAD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AA336A2260D997004EAD70 /* LaunchScreen.storyboard */; };
+		95AA33742260DB56004EAD70 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33732260DB56004EAD70 /* LocationDelegate.swift */; };
+		95AA33762260DD4E004EAD70 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33752260DD4E004EAD70 /* CustomSwitch.swift */; };
+		95AA33782260DD73004EAD70 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AA33772260DD73004EAD70 /* CustomThumbView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95AA335B2260D996004EAD70 /* MyCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AA335E2260D996004EAD70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95AA33602260D996004EAD70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95AA33602260D996004EAD70 /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		95AA33632260D996004EAD70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95AA33662260D996004EAD70 /* MyCompass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCompass.xcdatamodel; sourceTree = "<group>"; };
 		95AA33682260D997004EAD70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95AA336B2260D997004EAD70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95AA336D2260D997004EAD70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95AA33732260DB56004EAD70 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		95AA33752260DD4E004EAD70 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		95AA33772260DD73004EAD70 /* CustomThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				95AA335E2260D996004EAD70 /* AppDelegate.swift */,
-				95AA33602260D996004EAD70 /* ViewController.swift */,
+				95AA33602260D996004EAD70 /* CompassViewController.swift */,
+				95AA33732260DB56004EAD70 /* LocationDelegate.swift */,
 				95AA33622260D996004EAD70 /* Main.storyboard */,
 				95AA33682260D997004EAD70 /* Assets.xcassets */,
 				95AA336A2260D997004EAD70 /* LaunchScreen.storyboard */,
 				95AA336D2260D997004EAD70 /* Info.plist */,
 				95AA33652260D996004EAD70 /* MyCompass.xcdatamodeld */,
+				95AA33752260DD4E004EAD70 /* CustomSwitch.swift */,
+				95AA33772260DD73004EAD70 /* CustomThumbView.swift */,
 			);
 			path = MyCompass;
 			sourceTree = "<group>";
@@ -103,7 +112,7 @@
 				};
 			};
 			buildConfigurationList = 95AA33562260D996004EAD70 /* Build configuration list for PBXProject "MyCompass" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95AA33612260D996004EAD70 /* ViewController.swift in Sources */,
+				95AA33782260DD73004EAD70 /* CustomThumbView.swift in Sources */,
+				95AA33612260D996004EAD70 /* CompassViewController.swift in Sources */,
+				95AA33742260DB56004EAD70 /* LocationDelegate.swift in Sources */,
+				95AA33762260DD4E004EAD70 /* CustomSwitch.swift in Sources */,
 				95AA33672260D996004EAD70 /* MyCompass.xcdatamodeld in Sources */,
 				95AA335F2260D996004EAD70 /* AppDelegate.swift in Sources */,
 			);
@@ -296,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PyrovSergey.MyCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PyrovSergey.MyCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

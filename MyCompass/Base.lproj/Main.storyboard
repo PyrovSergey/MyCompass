@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Compass View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CompassViewController" customModule="MyCompass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_compass" translatesAutoresizingMaskIntoConstraints="NO" id="LxH-ac-GJS">
+                                <rect key="frame" x="27.5" y="100" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="nv6-so-ThO"/>
+                                    <constraint firstAttribute="width" constant="320" id="s7A-yW-kWi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFF-Qw-Z48">
+                                <rect key="frame" x="195" y="45" width="155" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-sb-PtP">
+                                <rect key="frame" x="25" y="45" width="155" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_north_white" translatesAutoresizingMaskIntoConstraints="NO" id="3e2-fY-avG">
+                                <rect key="frame" x="182.5" y="93" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="Buf-uX-cZr"/>
+                                    <constraint firstAttribute="height" constant="10" id="gzc-ke-Ie9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8t-tU-Nc9">
+                                <rect key="frame" x="176" y="161" width="23" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="269º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-Id-n2e">
+                                <rect key="frame" x="171.5" y="343" width="32" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wWg-sb-PtP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="1Rz-Wd-Svu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yFF-Qw-Z48" secondAttribute="trailing" constant="25" id="4wg-b4-Qgr"/>
+                            <constraint firstItem="s8t-tU-Nc9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AdX-kD-7jq"/>
+                            <constraint firstItem="sXF-Id-n2e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="323" id="HxU-vm-IhH"/>
+                            <constraint firstItem="sXF-Id-n2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLA-Ae-xbk"/>
+                            <constraint firstItem="LxH-ac-GJS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="VvJ-TV-Fcv"/>
+                            <constraint firstItem="s8t-tU-Nc9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="141" id="ZSq-Lo-BVN"/>
+                            <constraint firstItem="yFF-Qw-Z48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="195" id="au3-wd-jYR"/>
+                            <constraint firstItem="3e2-fY-avG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bod-zy-Zps"/>
+                            <constraint firstItem="yFF-Qw-Z48" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="fJl-Uz-TlS"/>
+                            <constraint firstItem="wWg-sb-PtP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="lkH-P9-31L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wWg-sb-PtP" secondAttribute="trailing" constant="195" id="oVj-0A-wxf"/>
+                            <constraint firstItem="3e2-fY-avG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="qUr-Bn-68l"/>
+                            <constraint firstItem="LxH-ac-GJS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zz6-1f-S54"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="angleLabel" destination="sXF-Id-n2e" id="mQc-9w-bMe"/>
+                        <outlet property="arrowNortImage" destination="3e2-fY-avG" id="ANw-B7-Wqf"/>
+                        <outlet property="compass" destination="LxH-ac-GJS" id="QxK-AY-zKv"/>
+                        <outlet property="geographicalDirectionLabel" destination="s8t-tU-Nc9" id="Ter-Mq-JvH"/>
+                        <outlet property="latitudeLabel" destination="wWg-sb-PtP" id="4WV-P6-Yjg"/>
+                        <outlet property="longtitudeLabel" destination="yFF-Qw-Z48" id="Rlf-IZ-yHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="50.625" y="25.35211267605634"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow_north_white" width="21" height="18"/>
+        <image name="white_compass" width="169.33332824707031" height="168.66667175292969"/>
+    </resources>
 </document>
