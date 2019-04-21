@@ -10,5 +10,4 @@ A simple application that contains a compass and allows you to control the flash
 - Does not require any additional action before installation
  
 ### Screenshots
-<img src="https://i.ibb.co/h8wdzpC/IMG-F0-DFD3-B90075-1.jpg" width="200">
-<img src="https://i.ibb.co/MnT4Ts0/IMG-F0-DFD3-B90075-2.jpg" width="200"
+<img src="https://i.ibb.co/h8wdzpC/IMG-F0-DFD3-B90075-1.jpg" width="200"><img src="https://i.ibb.co/MnT4Ts0/IMG-F0-DFD3-B90075-2.jpg" width="200">
