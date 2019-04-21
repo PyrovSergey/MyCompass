@@ -1,7 +1,7 @@
 # MyCompass
 A simple application that contains a compass and allows you to control the flashlight.
 
-<a href="https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app">
+<a href="https://itunes.apple.com/ru/app/mycompass-%C2%BA/id1459741994?mt=8">
   <img src="https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png" width="200"> 
 </a>
 
